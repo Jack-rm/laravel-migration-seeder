@@ -44,7 +44,12 @@
                         <td>{{ $travel->date_return}}</td>
                         <td>{{ $travel->airline_company}}</td>
                         <td>{{ $travel->participants}}</td>
-                        <td>{{ $travel->is_available}}</td>
+
+                    @if ($travel->is_available == 1)
+                        <td><b style="color:green;"> @php echo "yes" @endphp </b></td>
+                    @else
+                        <td><b style="color:red;"> @php echo "no" @endphp </b></td>
+                    @endif
                         
                         <td><a href="{{ route('admin.travels.edit', $travel ) }}" class="btn btn-secondary">Edit</a></td>
                         <td>
