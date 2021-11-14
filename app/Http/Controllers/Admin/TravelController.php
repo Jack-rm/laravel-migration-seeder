@@ -100,6 +100,6 @@ class TravelController extends Controller
     {
         $travel->delete();
 
-        return redirect()->route('admin.travels.index')->with("deleted_title", $travel->name )->with('alert-message', "$travel->name è stato eliminato con successo");
+        return redirect()->route('admin.travels.index')->with("deleted_title", $travel->name )->with('alert-message', "$travel->name has been succesfully eliminated");
     }
 }

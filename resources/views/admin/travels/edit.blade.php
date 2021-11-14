@@ -3,8 +3,8 @@
 @section('content')
 
     <div class="container">
-        <header>
-            <h1>Edit {{ $travel-name }}</h1>
+        <header class="pb-3">
+            <h1><b>{{ $travel->name }}</b></h1>
         </header>
 
         <section id="travel-form">
@@ -61,8 +61,11 @@
                     <input class="form-control" type="text" placeholder="Description" id="description" name="description" value="{{$travel->description}}" required>
                 </div>
 
-                <button type="submit" class="btn btn-primary">Create</button>
-                <button type="reset" class="btn btn-secondary">Delete</button>
+                <div class="d-flex justify-content-between pt-3">
+                    <button type="submit" class="btn btn-primary">Edit</button>
+                    <a href="{{route('admin.travels.index')}}" class="btn btn-toolbar"><u>Go back to Travels</u></a>
+                </div>
+
             </form>
         </section>
     </div>
