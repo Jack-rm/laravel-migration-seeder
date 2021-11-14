@@ -17,10 +17,10 @@ class TravelsTableSeeder extends Seeder
     {
         for ($i = 0; $i < 10; $i++){
             $newTravel = new Travel();
-            $newTravel->name = $faker->sentence(4);
+            $newTravel->name = $faker->sentence(2);
             $newTravel->destination_city = $faker->words(1, true);
             $newTravel->destination_country = $faker->countryISOAlpha3();
-            $newTravel->accomodation = $faker->randomElement(['Grand Hotel Central','Residence el Chapo','','Greatest Motel Ever','NotThatGood Hotel']);
+            $newTravel->accomodation = $faker->randomElement(['Grand Hotel Central','Residence el Chapo','Greatest Motel Ever','NotThatGood Hotel']);
             $newTravel->price = $faker->randomFloat(2, 200, 3000);
             $newTravel->travel_days = $faker->numberBetween(3, 15);
             $newTravel->date_departure = $faker->dateTimeBetween('+4 week', '+5 week');
